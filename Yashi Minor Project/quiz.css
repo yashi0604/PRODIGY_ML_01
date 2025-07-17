@@ -1,0 +1,177 @@
+:root {
+  --text: #fff;
+  --button: #4caf50;
+  --button-hover: #388e3c;
+  --correct: #4caf50;
+  --wrong: #f44336;
+}
+
+body.dark {
+  --text: #eee;
+  --button: #bb86fc;
+  --button-hover: #985eff;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: url('f675a555-a19b-4c83-b7ce-cd97217ab378.png') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Center all content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Title styling */
+#title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  #title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Card layout with glass effect */
+.card {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  color: #fff;
+  width: 90%;
+  max-width: 1000px;
+}
+
+/* Inputs, Selects, Buttons */
+.card input,
+.card select,
+.card button {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: none;
+}
+
+/* Form buttons in row */
+.form-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Global button style */
+button {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  background: var(--button);
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: var(--button-hover);
+}
+
+/* Quiz Questions Section */
+.questions {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem auto; /* This centers it */
+  text-align: center;
+  max-width: 1000px;
+  color: #fff;
+}
+
+
+/* Answer Options */
+.option span {
+  display: block;
+  padding: 0.6rem 1rem;
+  margin: 0.4rem 0;
+  background: #e0f7fa;
+  border: 1px solid #00bcd4;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.option span.correct {
+  background-color: var(--correct) !important;
+  color: white;
+}
+
+.option span.wrong {
+  background-color: var(--wrong) !important;
+  color: white;
+}
+
+/* Category Tag */
+.category-tag {
+  background: #e6ee9c;
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Timer */
+.timer {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 10px;
+  background: #bbdefb;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.progress-bar::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 0;
+  background: #42a5f5;
+  transition: width 0.3s;
+}
+
+/* Theme toggle placement */
+.theme-toggle {
+  text-align: right;
+  margin: 1rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1rem;
+  }
+
+  input, select, button {
+    font-size: 1rem;
+  }
+}
